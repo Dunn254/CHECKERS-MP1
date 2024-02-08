@@ -1,0 +1,17 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 2px; /* gap between squares */
+  }
+  
+  .square {
+    width: 50px;
+    height: 50px;
+    background-color: #e5f130; /* Light square color */
+  }
+  
+  .square:nth-child(odd):nth-of-type(odd),
+  .square:nth-child(even):nth-of-type(even) {
+    background-color: #0c0b0b; /* Dark square color */
+  }
