@@ -4,3 +4,5 @@ const board = document.createElement("div");
 board.id = "checkers-board";
 //add the class board
 board.classList.add("board")
+//create squares using loop(not sure to use for or while...talk to Omar)
+for (let x = 1; x <=64; x++) { ... }
