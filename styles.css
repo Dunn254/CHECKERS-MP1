@@ -1,13 +1,26 @@
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    margin: 0;
+
+}
+
 .board {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
+    grid-template-columns: repeat(8, 40px);
+    grid-template-rows: repeat(8, 40px);
     gap: 2px; /* gap between squares */
   }
   
   .square {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #e5f130; /* Light square color */
   }
   
