@@ -29,20 +29,20 @@
     background-color: #0c0b0b;
   }*/
   body {
-    text-align: center;
+    text-align:  center;
 }
 
-.cell {
+.cell  {
     height: 50px;
-    width: 50px;
-    border: 2px solid red;
-    border-style: double;
+    width: 450px;
+    border: 2px solid  red;
+    border-style:  double;
 }
 
-.blackcell {
-    background-color: black;
+.blackcell  {
+    background-color:  black;
 }
 
-.whitecell {
-    background-color: rgb(179, 166, 55);
+.whitecell  {
+    background-color:  rgb(179, 166, 55);
 }

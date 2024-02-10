@@ -9,47 +9,47 @@
 board()
 //create squares using loop(not sure to use for or while...talk to Omar)
 for (let x = 1; x <=64; x++) { ... }*/
-// Create a center tag to center all the elements
-let center = document.createElement('center');
+// Create  a  center  tag  to  center  all  the  elements
+let  center = document.createElement('center');
         
-// Create board element
-let CheckersBoard = document.createElement('board');
+// Create  a  table  element
+let  CheckersBoard = document.createElement('table');
 for (let x = 0; x < 8; x++) {
 
-    // Create row
-    let ab = document.createElement('ab');
-    for (let y = 0; y < 8; y++) {
+    // Create  a row
+    let  tr = document.createElement('tr');
+    for  (let y = 0; y < 8; y++) {
 
-        // Create cell
-        let cd = document.createElement('cd');
+        // Create  a  cell
+        let td = document.createElement('td');
 
-        // If the sum of cell coordinates is even
-        // then color the cell white
-        if ((x + y) % 2 == 0) {
+        // If  sum  of  cell  coordinates  is  even
+        // then  color  the  cell  white
+        if  ((x + y) % 2 == 0) {
 
-            // Create a class attribute for white cells
-            cd.setAttribute('class', 'cell whitecell');
-            ab.appendChild(cd);
+            // Create  a  class  attribute  for  white  cells
+            td.setAttribute('class', 'cell whitecell');
+            tr.appendChild(td);
         }
 
-        // If the sum of cell coordinates is odd then
-        // color the cell black
-        else {
+        // If  sum  of  cell  coordinates  is  not  even  then
+        // color  the  cell  black
+        else  {
 
-            // Create a class attribute for black cells
-            cd.setAttribute('class', 'cell blackcell');
+            // Create  a  class  attribute  for  black  cells
+            td.setAttribute('class', 'cell blackcell');
 
-            // Append cell to its row
-            ab.appendChild(cd);
+            // Append  the  cell  to  its  row
+            tr.appendChild(td);
         }
     }
 
-    // Append the row
-    CheckersBoard.appendChild(ab);
+    // Append  the  row
+    CheckersBoard.appendChild(tr);
 }
 center.appendChild(CheckersBoard);
 
-// Modifying table attribute properties
+// Modifying  table  attribute  properties
 CheckersBoard.setAttribute('cellspacing', '0');
-CheckersBoard.setAttribute('width', '270px');
+CheckersBoard.setAttribute('width', '450px');
 document.body.appendChild(center);
