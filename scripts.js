@@ -10,18 +10,18 @@ board()
 //create squares using loop(not sure to use for or while...talk to Omar)
 for (let x = 1; x <=64; x++) { ... }*/
 // Create a center tag to center all the elements
-var center = document.createElement('center');
+let center = document.createElement('center');
         
 // Create board element
-var CheckersBoard = document.createElement('board');
-for (var x = 0; x < 8; x++) {
+let CheckersBoard = document.createElement('board');
+for (let x = 0; x < 8; x++) {
 
     // Create row
-    var ab = document.createElement('ab');
-    for (var y = 0; y < 8; y++) {
+    let ab = document.createElement('ab');
+    for (let y = 0; y < 8; y++) {
 
         // Create cell
-        var cd = document.createElement('cd');
+        let cd = document.createElement('cd');
 
         // If the sum of cell coordinates is even
         // then color the cell white
