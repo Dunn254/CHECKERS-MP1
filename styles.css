@@ -1,4 +1,4 @@
-body {
+/*body {
 
     display: flex;
     justify-content: center;
@@ -7,12 +7,12 @@ body {
     margin: 0;
 
 }
-
-.board {
+*/
+/*.board {
     display: grid;
     grid-template-columns: repeat(8, 40px);
     grid-template-rows: repeat(8, 40px);
-    gap: 2px; /* gap between squares */
+    gap: 2px; 
   }
   
   .square {
@@ -21,10 +21,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e5f130; /* Light square color */
+    background-color: #e5f130;
   }
   
   .square:nth-child(odd):nth-of-type(odd),
   .square:nth-child(even):nth-of-type(even) {
-    background-color: #0c0b0b; /* Dark square color */
-  }
+    background-color: #0c0b0b;
+  }*/
+  body {
+    text-align: center;
+}
+
+.cell {
+    height: 50px;
+    width: 50px;
+    border: 2px solid red;
+    border-style: double;
+}
+
+.blackcell {
+    background-color: black;
+}
+
+.whitecell {
+    background-color: rgb(179, 166, 55);
+}
