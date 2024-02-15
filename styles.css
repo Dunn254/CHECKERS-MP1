@@ -7,8 +7,8 @@
     margin: 0;
 
 }
-*/
-/*.board {
+
+.board {
     display: grid;
     grid-template-columns: repeat(8, 40px);
     grid-template-rows: repeat(8, 40px);
@@ -27,11 +27,17 @@
   .square:nth-child(odd):nth-of-type(odd),
   .square:nth-child(even):nth-of-type(even) {
     background-color: #0c0b0b;
-  }*/
+  }
   body {
 
     text-align:  center;
-    
+
+}
+
+canvas {
+    position: absolute;
+    z-index: 10;
+
 }
 
 .cell  {
@@ -53,4 +59,32 @@
 
     background-color:  rgb(179, 166, 55);
 
+}*/
+/*table {
+    border: 2px red;
+    width: 450px;
+    height: 450px;
 }
+
+.dark-cell  {
+    background-color: black; 
+}
+
+.light-cell {
+    background-color: yellow;
+}
+
+.piece {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%
+}
+
+.dark-piece {
+    background-color: red;
+}
+
+.light-piece {
+    background-color: aqua;
+}
+*/
