@@ -349,9 +349,10 @@ let board = [
 }
 //work on moving now(bring in players)
 let currentPlayer = 1;
-
+//store potential positions
 let newPiecesPositions = [];
 
+//Handle clicks on pieces
 function movePiece(e) {
   let piece = e.target;
   const row = parseInt(piece.getAttribute("row"));
@@ -410,4 +411,55 @@ function enableToMove(p) {
   } else {
     buildBoard();
    }
+}
+
+
+//adjacent cell  has opponent piece && cell beyond that is empty 
+function findPieceCaptured(p, player) {
+    let found = false;
+    if (
+      board[p.row - 1][p.column - 1] === player &&
+      board[p.row - 2][p.column - 2] === 0
+    ) {
+      found = true;
+      newPosition = new Piece(p.row - 2, p.column - 2);
+      readyToMove = p;
+      markPossiblePosition(newPosition);
+      // save the new position and the opponent's piece position
+      capturedPosition.push({
+        newPosition: newPosition,
+        pieceCaptured: new Piece(p.row - 1, p.column - 1),
+      });
+    }
+  
+    if (
+      board[p.row - 1][p.column + 1] === player &&
+      board[p.row - 2][p.column + 2] === 0
+    ) {
+      found = true;
+      newPosition = new Piece(p.row - 2, p.column + 2);
+      readyToMove = p;
+      markPossiblePosition(newPosition);
+      // save the new position and the opponent's piece position
+      capturedPosition.push({
+        newPosition: newPosition,
+        pieceCaptured: new Piece(p.row - 1, p.column + 1),
+      });
+    }
+  
+    i
+  
+  
+    return found;
+  }
+  //How to win(1 player without valid moves)
+  if (black === 0 || white === 0) {
+    modalOpen(black);
+  }
+
+
+function modalOpen(black) {
+  document.getElementById("winner").innerHTML = black === 0 ? "White" : "Black";
+  document.getElementById("loser").innerHTML = black !== 0 ? "White" : "Black";
+  modal.classList.add("effect");
 }
