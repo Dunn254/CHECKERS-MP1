@@ -268,10 +268,30 @@ else
 }
 //Eating actions...
 let cellFinal = actionToCell(coords.x, coords.y, dir);
-let finalType = getTypeFromCell(cellFinal);
+let finalType = getTypeFromCell(cellFinal);*/
+
+* {
+    margin: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile {
+    display: none;
+}
 
 
 
 
-*/
 
