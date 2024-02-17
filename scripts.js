@@ -120,7 +120,7 @@ if  (x  >  4)  {
 
 drawStartPosition()*/
 
-
+//alert("is this displaying");
 const board = [
     null, 0, null, 1, null, 2, null, 3,
     4, null, 5, null, 6, null, 7, null,
@@ -135,10 +135,11 @@ const board = [
 // parses pieceId's and returns the index of that piece's place on the board
 let findPiece = function (pieceId) {
     let parsed = parseInt(pieceId);
+    
     return board.indexOf(parsed);
 };
 
-// DOM referenes
+// DOM references
 const cells = document.querySelectorAll("td");
 let redsPieces = document.querySelectorAll("p");
 let blacksPieces = document.querySelectorAll("span")
@@ -175,7 +176,7 @@ function givePiecesEventListeners() {
         for (let i = 0; i < redsPieces.length; i++) {
             redsPieces[i].addEventListener("click", getPlayerPieces);
         }
-    } else {
+    } else {//alert("does it display?")
         for (let i = 0; i < blacksPieces.length; i++) {
             blacksPieces[i].addEventListener("click", getPlayerPieces);
         }
@@ -191,6 +192,7 @@ function getPlayerPieces() {
     }
     removeCellonclick();
     resetBorders();
+    //alert("does this display?");
 }
 
 // removes possible moves from old selected piece (* this is needed because the user might re-select a piece *)
