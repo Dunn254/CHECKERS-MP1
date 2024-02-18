@@ -176,7 +176,7 @@ function givePiecesEventListeners() {
         for (let i = 0; i < redsPieces.length; i++) {
             redsPieces[i].addEventListener("click", getPlayerPieces);
         }
-    } else {//alert("does it display?")
+    } else {//alert("does it display?");
         for (let i = 0; i < blacksPieces.length; i++) {
             blacksPieces[i].addEventListener("click", getPlayerPieces);
         }
@@ -198,6 +198,7 @@ function getPlayerPieces() {
 // removes possible moves from old selected piece (* this is needed because the user might re-select a piece *)
 function removeCellonclick() {
     for (let i = 0; i < cells.length; i++) {
+        //Alert("Does this show anywhere?");
         cells[i].removeAttribute("onclick");
     }
 }
@@ -205,6 +206,7 @@ function removeCellonclick() {
 // resets borders to default
 function resetBorders() {
     for (let i = 0; i < playerPieces.length; i++) {
+        //Alert("Show me this");
         playerPieces[i].style.border = "1px solid white";
     }
     resetSelectedPieceProperties();
